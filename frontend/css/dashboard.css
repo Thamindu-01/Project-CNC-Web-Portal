@@ -1,0 +1,162 @@
+.main-content {
+    margin-left: 250px;
+    padding: 40px;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-bottom: 1px solid #d9dee1;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.page-title h1 {
+    font-size: 24px;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.page-title h1 i {
+    margin-left: 10px;
+    color: #33b2e1;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+}
+
+.user-profile i {
+    font-size: 36px;
+    color: #33b2e1;
+    margin-right: 10px;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.username {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.user-role {
+    font-size: 14px;
+    color: #888;
+}
+
+.profile-section {
+    margin-top: 40px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    gap: 20px;
+    /* flex-wrap: wrap; Add flexibility for smaller screens */
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: calc(25% - 20px); /* Adjust to fit gap */
+    text-align: center;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+    color: #33b2e1;
+    margin-bottom: 10px;
+}
+
+.card h3 i {
+    margin-left: 8px;
+    color: #33b2e1;
+}
+
+.card .info {
+    font-size: 14px;
+    color: #888;
+    margin-top: 10px;
+}
+
+.charts {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.chart {
+    background-color: white;
+    padding: 20px;
+    width: calc(50% - 10px); /* Adjust to fit gap */
+    border-radius: 10px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Add a responsive design for the canvas chart */
+.chart canvas {
+    width: 100% !important;
+    height: 300px !important;
+}
+
+/* Make responsive */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 20px;
+        margin-left: 0;
+    }
+    .sidebar {
+        width: 100px;
+        padding-top: 10px;
+    }
+    .sidebar ul li a {
+        font-size: 14px;
+    }
+    .stats {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .charts {
+        flex-direction: column;
+    }
+    .chart {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+#liveClock {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}

@@ -1,0 +1,142 @@
+.main-content {
+    margin-left: 250px;
+    padding: 40px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-bottom: 1px solid #d9dee1;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.page-title h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+}
+
+.user-profile i {
+    font-size: 36px;
+    color: #33b2e1;
+    margin-right: 10px;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.username {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.user-role {
+    font-size: 14px;
+    color: #888;
+}
+
+.settings-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 98%;
+    padding: 12px;
+    border: 1px solid #d9dee1;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.form-group.checkbox-group label {
+    margin-left: 10px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.save-btn, .cancel-btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.save-btn {
+    background-color: #4CAF50;
+    color: white;
+    transition: background-color 0.3s ease;
+    border-radius: 25px;
+}
+
+.save-btn:hover {
+    background-color: #43a047;
+}
+
+.cancel-btn {
+    background-color: #ff5e57;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+    border-radius: 25px;
+}
+
+.cancel-btn:hover {
+    background-color: #ff2e24;
+}
+
+/* Profile Picture CSS */
+.profile-picture-group {
+    text-align: center;
+}
+
+.profile-picture-container {
+    display: inline-block;
+    position: relative;
+}
+
+#profile-picture-preview {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 2px solid #33b2e1;
+}
+
+#profile-picture {
+    margin-top: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
