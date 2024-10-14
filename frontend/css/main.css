@@ -47,9 +47,9 @@ body {
 .company-logo {
     display: block;
     margin: 0 auto;
-    width: 150px;
+    width: 120px;
     height: auto;
-    /* padding-bottom: 20px; */
+    padding-bottom: 20px;
 }
 
 .sidebar ul li:hover {

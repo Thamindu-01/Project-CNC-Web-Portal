@@ -1,0 +1,690 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #0f172b;
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.footer h4 {
+    color: #33b2e1;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.footer h4::before {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background-color: #fea219;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+}
+
+.footer a {
+    color: #a0a0a0;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #fea219;
+}
+
+.footer p {
+    color: #a0a0a0;
+    font-size: 14px;
+}
+
+.footer .btn-link {
+    display: block;
+    padding: 5px 0;
+    color: #a0a0a0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer .btn-link:hover {
+    color: #fea219;
+    padding-left: 5px;
+}
+
+.footer .btn-social {
+    border-radius: 50%;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.footer .btn-social:hover {
+    background-color: #33b2e1;
+    color: white;
+}
+
+/* Newsletter Input Styling */
+.footer .form-control {
+    border: 2px solid #33b2e1;
+    border-radius: 40px;
+    padding: 15px;
+    background-color: transparent;
+    color: white;
+}
+
+.footer .form-control::placeholder {
+    color: #a0a0a0;
+}
+
+.footer .btn-primary {
+    border-radius: 40px;
+    padding: 10px 20px;
+    background-color: #fea219;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.footer .btn-primary:hover {
+    background-color: #33b2e1;
+}
+
+/* Copyright Styling */
+.copyright {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    margin-top: 20px;
+    color: #a0a0a0;
+}
+
+.copyright a {
+    color: #33b2e1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.copyright a:hover {
+    color: #fea219;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer .col-md-6 {
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Menu Section */
+.container-xxl {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f9f9f9;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 22px;
+    color: #33b2e1;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 36px;
+    color: #0f172b;
+    font-weight: 700;
+}
+
+/* Tab Menu */
+.nav-pills {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #eee;
+}
+
+.nav-pills .nav-item {
+    margin-right: 15px;
+}
+
+.nav-pills .nav-item:last-child {
+    margin-right: 0;
+}
+
+.nav-pills a {
+    padding-bottom: 10px;
+    font-size: 18px;
+    color: #0f172b;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-pills a.active {
+    color: #fea219;
+    border-bottom: 2px solid #fea219;
+}
+
+.nav-pills a:hover {
+    color: #33b2e1;
+}
+
+.nav-pills a i {
+    margin-right: 10px;
+}
+
+.tab-content {
+    margin-top: 30px;
+}
+
+/* Restaurant Cards */
+.row.g-4 .col-lg-6 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.d-flex.align-items-center {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden; /* Ensures the image stays inside the container */
+}
+
+.d-flex.align-items-center:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Uniform Image Size */
+.d-flex.align-items-center img {
+    width: 200px; /* Set a fixed width */
+    height: 150px; /* Set a fixed height */
+    object-fit: cover; /* Ensures the image covers the entire area while maintaining aspect ratio */
+    border-radius: 10px 0 0 10px; /* Rounded corners for the left side */
+    transition: transform 0.3s ease;
+}
+
+.d-flex.align-items-center img:hover {
+    transform: scale(1.05);
+}
+
+.w-100.d-flex.flex-column.text-start {
+    padding-left: 20px;
+}
+
+h5 {
+    font-size: 18px;
+    color: #0f172b;
+    font-weight: 600;
+    margin-bottom: 5px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+}
+
+h5 span.text-primary {
+    color: #fea219;
+}
+
+.small.fst-italic {
+    color: #888;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-pills {
+        flex-direction: column;
+    }
+
+    .row.g-4 .col-lg-6 {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Popular Meals Section */
+.popular-meals-section {
+    padding: 4rem 5%;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.popular-meals-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.meal-categories {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.meal-tab {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: 2px solid #ffa500;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.meal-tab i {
+    font-size: 1.5rem;
+}
+
+.meal-tab:hover,
+.meal-tab.active {
+    background-color: #ffa500;
+    color: white;
+}
+
+.meal-category-content {
+    display: none;
+}
+
+.meal-category-content.active {
+    display: block;
+}
+
+.restaurant-meals {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.meal-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;  /* Align image and meal details horizontally */
+    max-width: 800px;
+    width: 100%;
+}
+
+.meal-card img {
+    width: 150px; /* Reduced image size */
+    height: auto;
+    border-radius: 8px;
+    margin-right: 1.5rem;
+}
+
+.meal-card-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.meal-card h3 {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.meal-card p {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.meal-price {
+    font-size: 1.3rem;
+    color: var(--accent-color);
+    margin-left: auto; /* Move price to the right */
+    text-align: right; /* Ensure it's aligned to the right */
+}
+
+/* Animation */
+.meal-card:hover {
+    transform: translateY(-10px);
+}
+
+
+
+
+
+
+
+
+
+/* Testimonial Section Styling */
+.testimonial-section {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+}
+
+.testimonial-carousel .testimonial-card {
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.testimonial-carousel .testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-carousel .testimonial-content {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #555555;
+    line-height: 1.6;
+}
+
+.testimonial-carousel .testimonial-content i {
+    color: #fea219;
+    margin-bottom: 10px;
+}
+
+.testimonial-carousel .d-flex img {
+    border: 2px solid #33b2e1;
+    transition: all 0.3s ease-in-out;
+}
+
+.testimonial-carousel .d-flex img:hover {
+    transform: scale(1.1);
+}
+
+.testimonial-carousel h5 {
+    font-size: 18px;
+    color: #0f172b;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.testimonial-carousel small {
+    color: #fea219;
+}
+
+/* Owl Carousel Dots Styling */
+.owl-carousel .owl-dots .owl-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+    background-color: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.owl-carousel .owl-dots .owl-dot.active {
+    background-color: #33b2e1;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Testimonial Section */
+.testimonial-section {
+    padding: 4rem 5%;
+    background-color: #fff;
+    text-align: center;
+}
+
+.testimonial-section h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.testimonial-slideshow {
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.testimonial-slide {
+    display: flex;
+    justify-content: space-between;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+    flex: 1;
+    background-color: #fff;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 1rem;
+    text-align: left;
+    position: relative;
+}
+
+/* Quotation Icon */
+.quote-icon {
+    font-size: 2rem;
+    color: #ffa500;
+    margin-bottom: 1rem;
+}
+
+/* Testimonial Text */
+.testimonial-text {
+    font-style: italic;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+/* Client Info */
+.testimonial-client {
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+/* Client Image */
+.client-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+/* Client Name and Profession */
+.client-info h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.client-info .client-profession {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Slideshow navigation buttons */
+.testimonial-prev, .testimonial-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+}
+
+.testimonial-prev {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.testimonial-next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.testimonial-prev:hover, .testimonial-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Slideshow transition */
+.testimonial-slide {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%; /* Full width to show 3 testimonials at once */
+}
+
+.testimonial-card {
+    flex: 1;
+    margin: 0 1rem;
+    min-width: 300px; /* Ensure the cards take up enough space */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Our Services Section */
+.services-section {
+    padding: 4rem 5%;
+    text-align: center;
+    background-color: #fff;
+}
+
+.services-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.services-subtitle {
+    font-size: 3.5rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background-color: rgb(242, 242, 242);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+    max-width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    background-color: #ffa500;
+}
+
+.service-card i {
+    color: var(--secondary-color); /* Customize as needed */
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    color: var(--primary-color);
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-top: 0.5rem;
+}
+
+.service-card .material-icons {
+    color: black; /* Customize the color */
+    margin-bottom: 1rem;
+    font-size: 48px; /* Adjust the size as needed */
+}
+
+
+
+
+
+
+
+
+
+
+

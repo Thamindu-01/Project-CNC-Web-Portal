@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Tour | Fishing & Dining Adventures</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/booking.css">
+</head>
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3">
+        <a href="index.html" class="navbar-brand p-0">
+            <h1 class="text-primary m-0"><i class="fa fa-fish me-3"></i>Fishing & Dining</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0 pe-4">
+                <li><a href="/templates/admin.html"><i class="fas fa-chart-bar"></i> Dashboard</a></li>
+                <li><a href="/templates/details.html"><i class="fas fa-users"></i> Partner Details</a></li>
+                <li><a href="/templates/profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                <li><a href="/templates/calendar.html"><i class="fas fa-calendar-alt"></i> Calendar</a></li>
+                <li><a href="/templates/messages.html"><i class="fas fa-envelope"></i> Messages</a></li>
+                <li><a href="/templates/settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+            </div>
+            <a href="booking.html" class="btn btn-primary py-2 px-4">Book Now</a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Booking Section Start -->
+    <div class="container my-5">
+        <h2 class="text-center mb-5">Book Your Fishing Tour</h2>
+        <form id="booking-form">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                        <label for="name">Your Name</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                        <label for="email">Your Email</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="phone" placeholder="Phone Number" required>
+                        <label for="phone">Phone Number</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <select class="form-select" id="tour" required>
+                            <option value="" disabled selected>Select Tour</option>
+                            <option value="half-day">Half Day Fishing Tour</option>
+                            <option value="full-day">Full Day Fishing Tour</option>
+                            <option value="weekend">Weekend Fishing Adventure</option>
+                        </select>
+                        <label for="tour">Select Tour</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input type="date" class="form-control" id="date" required>
+                        <label for="date">Pick a Date</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <select class="form-select" id="restaurant" required>
+                            <option value="" disabled selected>Select Restaurant</option>
+                            <option value="ocean-grill">Ocean Grill</option>
+                            <option value="seafood-haven">Seafood Haven</option>
+                            <option value="catch-cook-bistro">Catch & Cook Bistro</option>
+                        </select>
+                        <label for="restaurant">Select Restaurant</label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Special Requests" id="requests" style="height: 100px"></textarea>
+                        <label for="requests">Special Requests</label>
+                    </div>
+                </div>
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary w-50 py-3">Submit Booking</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- Booking Section End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <!-- Footer Content Here -->
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.booking.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script>
+        document.getElementById('booking-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Basic form validation and submission code
+            alert('Booking submitted successfully!');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Sign Up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Basic styles for the login page */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url('/image/bg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeInBackground 1s ease-in-out;
+        }
+
+        @keyframes fadeInBackground {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 450px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: scaleUp 0.6s ease-in-out;
+        }
+
+        @keyframes scaleUp {
+            from {
+                transform: scale(0.8);
+                opacity: 0.5;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .logo {
+            display: block;
+            margin: 0 auto 20px;
+            width: 180px;
+        }
+
+        .tab-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            flex: 1;
+            text-align: center;
+            font-size: 18px;
+            padding-bottom: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.7);
+            transition: color 0.3s, border-color 0.3s;
+            position: relative;
+        }
+
+        .tab.active {
+            color: #fff;
+            border-color: #007bff;
+        }
+
+        .tab.active::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #007bff;
+            border-radius: 20px;
+        }
+
+        .form-container {
+            margin-top: 20px;
+            animation: slideInForm 1s ease-in-out;
+        }
+
+        @keyframes slideInForm {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .group {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+
+        .label {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .input:focus {
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+
+        .input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .foot-lnk {
+            margin-top: 10px;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 14px;
+        }
+
+        .foot-lnk a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .foot-lnk a:hover {
+            color: #0056b3;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .sign-up-form-container {
+            max-height: 500px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+
+        /* New Home Link Style */
+        .home-link {
+            margin-top: 20px;
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .home-link a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .home-link a:hover {
+            color: #ffffff;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="/image/logo.png" alt="Logo" class="logo">
+
+        <div class="tab-container">
+            <div class="tab active" id="sign-in-tab">Sign In</div>
+            <div class="tab" id="sign-up-tab">Sign Up</div>
+        </div>
+
+        <!-- Sign In Form -->
+        <div class="form-container active-form" id="sign-in-form">
+            <form method="post" action="/login">
+                <div class="group">
+                    <label for="email" class="label">Email</label>
+                    <input id="email" name="email" type="email" class="input" placeholder="Email" required autocomplete="off">
+                </div>
+                <div class="group">
+                    <label for="password" class="label">Password</label>
+                    <input id="password" name="password" type="password" class="input" placeholder="Password" required autocomplete="off">
+                </div>
+                <div class="group">
+                    <input type="submit" class="button" value="Sign In">
+                </div>
+            </form>
+            <div class="foot-lnk">
+                <a href="#forgot">Forgot Password?</a>
+            </div>
+            <!-- Return to Home link -->
+            <div class="home-link">
+                <a href="http://localhost:4000/">Return to Home</a>
+            </div>
+        </div>
+
+        <!-- Sign Up Form -->
+        <div class="form-container hidden sign-up-form-container" id="sign-up-form">
+            <form method="post" action="/signup">
+                <div class="group">
+                    <label for="username" class="label">Username</label>
+                    <input id="username" name="name" type="text" class="input" placeholder="Username" required>
+                </div>
+                <div class="group">
+                    <label for="restaurant-address" class="label">Restaurant address</label>
+                    <input id="restaurant-address" name="restaurantAddress" type="text" class="input" placeholder="Restaurant address" required>
+                </div>
+                <div class="group">
+                    <label for="restaurant-name" class="label">Restaurant name</label>
+                    <input id="restaurant-name" name="restaurantName" type="text" class="input" placeholder="Restaurant name" required>
+                </div>
+                <div class="group">
+                    <label for="email" class="label">Email</label>
+                    <input id="email" name="email" type="email" class="input" placeholder="Email" required>
+                </div>
+                <div class="group">
+                    <label for="phone" class="label">Mobile phone number</label>
+                    <input id="phone" name="phone" type="tel" class="input" placeholder="Phone number" required>
+                </div>
+                <div class="group">
+                    <label for="password" class="label">Password</label>
+                    <input id="password" name="password" type="password" class="input" placeholder="Password" required>
+                </div>
+                <div class="group">
+                    <input type="submit" class="button" value="Sign Up">
+                </div>
+            </form>
+            <!-- Return to Home link -->
+            <div class="home-link">
+                <a href="http://localhost:4000/">Return to Home</a>
+            </div>            
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for switching between sign-in and sign-up forms
+        const signInTab = document.getElementById('sign-in-tab');
+        const signUpTab = document.getElementById('sign-up-tab');
+        const signInForm = document.getElementById('sign-in-form');
+        const signUpForm = document.getElementById('sign-up-form');
+
+        signInTab.addEventListener('click', () => {
+            signInTab.classList.add('active');
+            signUpTab.classList.remove('active');
+            signInForm.classList.add('active-form');
+            signInForm.classList.remove('hidden');
+            signUpForm.classList.add('hidden');
+            signUpForm.classList.remove('active-form');
+        });
+
+        signUpTab.addEventListener('click', () => {
+            signUpTab.classList.add('active');
+            signInTab.classList.remove('active');
+            signUpForm.classList.add('active-form');
+            signUpForm.classList.remove('hidden');
+            signInForm.classList.add('hidden');
+            signInForm.classList.remove('active-form');
+        });
+    </script>
+</body>
+</html>

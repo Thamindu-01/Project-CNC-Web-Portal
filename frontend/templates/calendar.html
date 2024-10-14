@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Calendar</title>
+    <!-- Include Google Font Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/calendar.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script defer src="../scripts/calendar.js"></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <img src="../img/logo.png" alt="Company Logo" class="company-logo">
+        <ul>
+            <li><a href="./dashboard.html"><i class="fas fa-chart-bar"></i> Dashboard</a></li>
+            <li><a href="./details.html"><i class="fas fa-users"></i> Partner Details</a></li>
+            <li><a href="./profile.html"><i class="fas fa-user"></i> Profile</a></li>
+            <li><a href="./calendar.html"><i class="fas fa-calendar-alt"></i> Calendar</a></li>
+            <li><a href="./messages.html"><i class="fas fa-envelope"></i> Messages</a></li>
+            <li><a href="./settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+        </ul>
+        <a href="./login.html" class="logout-btn">Log Out</a>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div class="page-title">
+                <h1>Calendar</h1>
+            </div>
+            <div class="user-profile">
+                <i class="fas fa-user-circle"></i>
+                <div class="user-info">
+                    <span class="username">Alan Yip</span>
+                    <span class="user-role">Client</span>
+            </div>
+            </div>
+        </header>
+
+        <section class="calendar-container">
+            <div class="calendar">
+                <div id="interactive-calendar"></div>
+                <button id="go-to-today" class="today-btn">Go to Today</button>
+            </div>
+            <div class="upcoming-events">
+                <h2>Upcoming Events</h2>
+                <ul id="events-list">
+                    <!-- Upcoming events will be listed here dynamically -->
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

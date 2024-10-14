@@ -108,6 +108,25 @@ td {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Styling for Add New Partner Button */
+.add-new-btn {
+    background-color: #fea116;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-new-btn:hover {
+    background-color: #1f90c1;
+    transform: scale(1.05);
+}
+
 /* Styling for modal popup */
 .modal {
     display: none;
@@ -125,7 +144,9 @@ td {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    width: 400px;
+    width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     animation: modalFadeIn 0.3s ease-in-out;
@@ -142,23 +163,47 @@ td {
     }
 }
 
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
 .modal-header img {
-    max-width: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+    max-width: 80px;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-left: 62px;
 }
 
 .modal-header h2 {
     font-size: 24px;
+    color: #333;
     margin: 0;
+    font-weight: 700;
 }
 
 .modal-body p {
     margin: 10px 0;
+    font-size: 16px;
+    color: #555;
 }
 
-.edit-btn, .delete-btn {
+/* Modal Buttons */
+.edit-btn {
     background-color: #33b2e1;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+} 
+
+.add-partner-btn {
+    background-color: green;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -168,8 +213,38 @@ td {
     transition: background-color 0.3s ease;
 }
 
-.edit-btn:hover, .delete-btn:hover {
-    background-color: #1f90c1;
+.delete-btn {
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.discard-btn {
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-btn:hover {
+    background-color: #21718e;
+} 
+
+.add-partner-btn:hover {
+    background-color: rgb(1, 99, 1);
+}
+
+.delete-btn:hover, .discard-btn:hover {
+    background-color: rgb(172, 0, 0);
 }
 
 .close {
@@ -178,4 +253,141 @@ td {
     right: 15px;
     font-size: 28px;
     cursor: pointer;
+}
+
+/* Form in Add Partner Modal */
+#addPartnerForm input, #addPartnerForm textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #d9dee1;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#addPartnerForm label {
+    display: block;
+    text-align: left;
+    margin: 10px 5%;
+    font-weight: 500;
+    color: #333;
+}
+
+#addPartnerForm .form-group {
+    text-align: left;
+    margin: 10px 5%;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+
+/* Slideshow styling */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: 20px auto;
+}
+
+.slides img {
+    width: 75%;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: block;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.slideshow-container .prev:hover, .slideshow-container .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Status indicator styling */
+.status-indicator {
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+}
+
+.status-indicator.open {
+    background-color: green;
+}
+
+.status-indicator.closed {
+    background-color: red;
+}
+
+/* Menu view button */
+.menu-view-btn {
+    background-color: #fea116;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-view-btn:hover {
+    background-color: #ff9100;
+}
+
+/* Preview Images */
+.images-preview img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 90%;
+    }
+
+    .modal-header img {
+        display: none;
+    }
+
+    .form-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-footer button {
+        width: 100%;
+        margin: 5px 0;
+    }
 }

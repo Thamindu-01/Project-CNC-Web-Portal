@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Chart.js configuration for Revenue Chart
     const revenueCtx = document.getElementById('revenueChart').getContext('2d');
     const revenueChart = new Chart(revenueCtx, {
-        type: 'line', // You can use 'bar', 'line', 'pie', etc.
+        type: 'line',
         data: {
             labels: ['January', 'February', 'March', 'April', 'May', 'June'],
             datasets: [{
@@ -65,7 +65,35 @@ document.addEventListener("DOMContentLoaded", function () {
         clockElement.textContent = currentTime;
     }
 
-    // Update the clock every second
     setInterval(updateClock, 1000);
-    updateClock(); // Initial call to set the time immediately
+    updateClock();
+
+    // Dark Mode Toggle
+    const darkModeIcon = document.getElementById('darkModeIcon');
+    const currentMode = localStorage.getItem('dark-mode') || 'light';
+
+    // Function to switch modes
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+
+        // Check if dark mode is enabled
+        const isDarkMode = document.body.classList.contains('dark-mode');
+        darkModeIcon.classList.toggle('fa-moon', !isDarkMode);
+        darkModeIcon.classList.toggle('fa-sun', isDarkMode);
+
+        // Save preference to localStorage
+        localStorage.setItem('dark-mode', isDarkMode ? 'dark' : 'light');
+    }
+
+    // Load current mode from localStorage
+    if (currentMode === 'dark') {
+        document.body.classList.add('dark-mode');
+        darkModeIcon.classList.remove('fa-moon');
+        darkModeIcon.classList.add('fa-sun');
+    } else {
+        darkModeIcon.classList.remove('fa-sun');
+        darkModeIcon.classList.add('fa-moon');
+    }
+
+    darkModeIcon.addEventListener('click', toggleDarkMode);
 });

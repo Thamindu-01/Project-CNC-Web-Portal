@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catch N Cook World Tour - About Us</title>
+
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            background-color: #add8e6ca;
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 100px;
+            height: auto;
+            margin-right: 10px;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin-left: auto; /* Moves the navigation to the right */
+            padding-left: 20px; /* Adjust the spacing to the right */
+        }
+        nav ul li {
+            margin-right: 1rem;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            color: #f6ad55;
+        }
+        .book-table {
+            background-color: #fea116;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .hero {
+            position: relative;
+            background-image: url('../img/bg-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 5rem 0;
+            height: 400px;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Adds a dark overlay */
+            z-index: 1;
+        }
+        .hero h1 {
+            position: relative;
+            z-index: 2;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            padding-top: 100px;
+        }
+
+        .breadcrumb {
+            margin-top: 1rem;
+        }
+        .breadcrumb a {
+            color: #ffa500;
+            text-decoration: none;
+        }
+        .content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .about-section {
+            display: flex;
+            gap: 2rem;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            flex: 1;
+        }
+        .image-grid img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        .about-text {
+            flex: 1;
+        }
+        .stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+        .stat {
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 2rem;
+            color: #ffa500;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Section styles */
+        .chefs-section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-radius: 20px;
+        }
+
+        .section-subtitle {
+            color: #f4a261;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            color: #ffffff;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        /* Chefs grid */
+        .chefs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .chef-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .chef-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .chef-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .chef-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .chef-name {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .chef-title {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .social-link {
+            color: #f4a261;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-link:hover {
+            color: #e76f51;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .chefs-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+        
+        /* Modern footer styles */
+        footer {
+            background-color: #0f172b;
+            color: white;
+            padding: 3rem 0;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        .footer-section h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        .footer-section ul {
+            list-style: none;
+        }
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        .footer-section ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer-section ul li a:hover {
+            color: #f6ad55;
+        }
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .social-icons a {
+            color: white;
+            text-decoration: none;
+        }
+        .social-icons a:hover {
+            color: #f6ad55;
+        }
+        .newsletter-form {
+            display: flex;
+            margin-top: 1rem;
+        }
+        .newsletter-form input {
+            flex-grow: 1;
+            padding: 0.5rem;
+            border: none;
+            border-radius: 4px 0 0 4px;
+        }
+        .newsletter-form button {
+            background-color: #f6ad55;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        .copyright {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+    </style>
+    <!-- FontAwesome CDN for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="../img/logo.png" alt="Catch N Cook Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="http://localhost:4000/">HOME</a></li>
+                    <li><a href="./about.html">ABOUT</a></li>
+                    <li><a href="./service.html">SERVICE</a></li>
+                    <li><a href="./menu.html">MENU</a></li>
+                    <li><a href="#">PAGES</a></li>
+                    <li><a href="./contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+            <a href="../templates/login.html">
+                <button class="book-table">LOGIN</button>
+            </a>  
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>About Us</h1>
+    </section>
+
+    <main>
+        <div class="content">
+            <section class="about-section">
+                <div class="image-grid">
+                    <img src="../img/about-1.jpg" alt="Restaurant Interior">
+                    <img src="../img/about-2.jpg" alt="Chef Cooking">
+                    <img src="../img/about-3.jpg" alt="Food Plating">
+                    <img src="../img/about-4.jpg" alt="Seafood Dish">
+                </div>
+                <div class="about-text">
+                    <h2>About Us</h2>
+                    <h3>Welcome to Restoran</h3>
+                    <p>Welcome to Catch N Cook World Tour, the ultimate adventure for foodies and nature enthusiasts alike. We offer immersive tours that explore and celebrate local cuisine while promoting sustainable tourism and preserving the natural beauty of our destinations.</p>
+                    <!-- <div class="stats">
+                        <div class="stat">
+                            <div class="stat-number">15</div>
+                            <div>Years of<br>EXPERIENCE</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">50</div>
+                            <div>Popular<br>MASTER CHEFS</div>
+                        </div>
+                    </div> -->
+                    <button class="book-table">READ MORE</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <section class="chefs-section">
+        <div class="container">
+            <header class="section-header">
+                <h2 class="section-subtitle">Team Members</h2>
+                <h1 class="section-title">Our Master Chefs</h1>
+            </header>
+            <div class="chefs-grid" id="chefsGrid">
+                <!-- Chef cards will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Start -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Reservation</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Condition</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>5000, Adelaide CBD, Australia</p>
+                <p>+012 345 67890</p>
+                <p>info@example.com</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Opening</h3>
+                <p>Monday - Saturday</p>
+                <p>09AM - 09PM</p>
+                <p>Sunday</p>
+                <p>10AM - 08PM</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email">
+                    <button type="submit">SIGNUP</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© CNC web portal. All Rights Reserved.</p>
+            <p>Designed By Right Bipin, Suyog, Rusha & Thamindu</p>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <script>
+        // Chef data
+        const chefs = [
+            { name: "Fishbank Bar & Grill", title: "#", image: "../img/menu-1.jpg" },
+            { name: "Secrets by the Sea", title: "#", image: "../img/menu-2.jpg" },
+            { name: "Si Sea", title: "#", image: "../img/menu-3.jpg" },
+            { name: "Fish out of the Water", title: "#", image: "../img/menu-4.jpg" }
+        ];
+
+        // Function to create a chef card
+        function createChefCard(chef) {
+            return `
+                <div class="chef-card">
+                    <img src="${chef.image}" alt="${chef.name}" class="chef-image">
+                    <div class="chef-info">
+                        <h3 class="chef-name">${chef.name}</h3>
+                        <p class="chef-title">${chef.title}</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Populate the chefs grid
+        document.addEventListener('DOMContentLoaded', () => {
+            const chefsGrid = document.getElementById('chefsGrid');
+            chefs.forEach(chef => {
+                chefsGrid.innerHTML += createChefCard(chef);
+            });
+        });
+    </script>
+</body>
+</html>
